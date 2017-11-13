@@ -1,0 +1,20 @@
+{
+  "name": "pandon",
+  "homepage": "https://github.com/INSATunisia/GL4-BigData-Team2",
+  "authors": [
+    "GL4-Team2"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "remarkable-bootstrap-notify": "^3.1.3"
+  }
+}

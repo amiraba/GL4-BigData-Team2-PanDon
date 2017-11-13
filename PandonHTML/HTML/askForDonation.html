@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is social network html5 template available in themeforest......" />
+	<meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page" />
+	<meta name="robots" content="index, follow" />
+	<title>Ask for donation</title>
+
+	<!-- Stylesheets
+    ================================================= -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/ionicons.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link href="css/emoji.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/map.css" />
+	<link rel="stylesheet" type="text/css" href="css/formDonation.css" />
+
+	<script src="js/map.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcRpU62qS_bbtTyUZ9jNVhcHzBRkKWTjU&libraries=places&callback=initAutocomplete" async defer></script>
+
+	<!--Favicon-->
+	<link rel="shortcut icon" type="image/png" href="images/fav.png" />
+</head>
+
+<body>
+
+	<!-- Header
+    ================================================= -->
+	<header id="header">
+		<nav class="navbar navbar-default navbar-fixed-top menu">
+			<div class="container">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand" href="index-register.html"><img src="images/logo.png" alt="logo" /></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right main-menu">
+						<li class="dropdown"><a href="timeline.html">Sarah</a></li>
+						 <li class="dropdown"><a href="home.html">Home</a></li>
+						 <li class="dropdown"><a href="askForDonation.html">Get donations</a></li>
+						 <li class="dropdown"><a href="contact.html">Contact</a></li>
+						 <li class="dropdown"><a href="index-register.html">Sign Out</a></li>
+					</ul>
+					<form class="navbar-form navbar-right hidden-sm">
+						<div class="form-group">
+							<i class="icon ion-android-search"></i>
+							<input type="text" class="form-control" placeholder="Search dons, photos, videos">
+						</div>
+					</form>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+	</header>
+	<!--Header End-->
+
+	<div id="page-contents" style="height:100%; width:100%">
+		<div class="container" style="height:100%; width:100%">
+			<div class="row" style="height:100%; width:100%">
+
+				<!-- Newsfeed Common Side Bar Left
+          ================================================= -->
+				<div class="col-md-3 static">
+					<div class="profile-card">
+						<img src="images/sarah.jpg" alt="user" class="profile-photo" />
+						<h5><a href="timeline.html" class="text-white">Sarah Cruiz</a></h5>
+						<a href="#" class="text-white"><i class="ion ion-android-person-add"></i> 1,299 followers</a>
+					</div>
+					<!--profile card ends-->
+
+				</div>
+
+				<div class="col-md-7" style="text-align:center;height:100%; width:100%">
+					<h1>Ask for a donation</h1>
+					<br>
+					<h4 style="text-align:left">Location of the action :</h4>
+					<div id="map"> </div>
+					<br>
+					<form action='#' style="height:100%; width:100%">
+						<div class='field'>
+							<h4 style="text-align:left">Title of the action :</h4>
+							<input placeholder='Titre'>
+							<label>Titre</label>
+						</div>
+						<h4 style="text-align:left">Category of the action :</h4>
+
+						<div class="mainselection">
+<select name="State" id="input7">
+    <option></option>
+    <option value="Donation or loan of objects">Donation or loan of objects</option>
+    <option value="Blood Donation">Blood Donation</option>
+    <option value="Crowd Fundingy">Crowd Funding</option>
+</select>
+</div>
+						<div class='field'>
+							<h4 style="text-align:left">Description of the action</h4>
+
+							<textarea placeholder='Description'> Description
+							</textarea>
+						</div>
+						<br>
+
+						<div class='field'>
+							<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
+						</div>
+
+						<div class='field'>
+							<h4>Upload photos and videos</h4>
+
+							<div style='display: block;  margin: auto; width: 40%;'>
+								<label for="upload" class="custom-file-input" style="		cursor: pointer;">
+								<img src="images/upload_file.png"/>
+							</label>
+								<input id="upload" type="file" multiple="" style="display:none">
+
+							</div>
+
+						</div>
+						<br>
+						<div class='field form-actions' style="text-align:center">
+							<button type='submit'>Submit</button>
+						</div>
+
+
+					</form>
+
+
+				</div>
+			</div>
+
+			<!-- Footer
+    ================================================= -->
+
+			<!--preloader-->
+			<div id="spinner-wrapper">
+				<div class="spinner"></div>
+			</div>
+
+			<!-- Scripts
+    ================================================= -->
+			<script src="js/jquery-3.1.1.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/masonry.pkgd.min.js"></script>
+			<script src="js/jquery.sticky-kit.min.js"></script>
+			<script src="js/jquery.scrollbar.min.js"></script>
+			<script src="js/script.js"></script>
+</body>
+
+</html>

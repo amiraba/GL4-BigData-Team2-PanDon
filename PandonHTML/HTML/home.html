@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is social network html5 template available in themeforest......"/>
+    <meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page"/>
+    <meta name="robots" content="index, follow"/>
+    <title>Pandon | Home </title>
+
+    <!-- Stylesheets
+    ================================================= -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/ionicons.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link href="css/emoji.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="images/fav.png"/>
+</head>
+<body>
+
+<!-- Header
+================================================= -->
+<header id="header">
+    <nav class="navbar navbar-default navbar-fixed-top menu">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index-register.html"><img src="images/logo.png" alt="logo"/></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right main-menu">
+                    <li class="dropdown"><a href="timeline.html">Sarah</a></li>
+                    <li class="dropdown"><a href="home.html">Home</a></li>
+                    <li class="dropdown"><a href="askForDonation.html">Get donations</a></li>
+                    <li class="dropdown"><a href="contact.html">Contact</a></li>
+                    <li class="dropdown"><a href="index-register.html">Sign Out</a></li>
+                </ul>
+                <form class="navbar-form navbar-right hidden-sm">
+                    <div class="form-group">
+                        <i class="icon ion-android-search"></i>
+                        <input type="text" class="form-control" placeholder="Search dons, photos, videos">
+                    </div>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</header>
+<!--Header End-->
+
+<div id="page-contents">
+    <div class="container">
+        <div class="row">
+
+            <!-- Newsfeed Common Side Bar Left
+            ================================================= -->
+            <div class="col-md-3 static">
+                <div class="profile-card">
+                    <img src="images/sarah.jpg" alt="user" class="profile-photo"/>
+                    <br> </br>
+                    <h5><a href="timeline.html" class="text-white">Sarah Cruiz</a></h5>
+                </div><!--profile card ends-->
+                <ul class="nav-news-feed">
+                    <li><i class="icon ion-ios-paper"></i>
+                        <div><a href="newsfeed.html">My Feeds</a></div>
+                    </li>
+                    <li><i class="icon ion-chatboxes"></i>
+                        <div><a href="newsfeed-messages.html">Messages</a></div>
+                    </li>
+                    <li><i class="icon ion-images"></i>
+                        <div><a href="newsfeed-images.html">Images</a></div>
+                    </li>
+                    <li><i class="icon ion-ios-videocam"></i>
+                        <div><a href="newsfeed-videos.html">Videos</a></div>
+                    </li>
+                    <li><i class="icon icon ion-planet"></i>
+                        <div><a href="newsfeed-maps.html">Maps</a></div>
+                    </li>
+                </ul><!--news-feed links ends-->
+
+            </div>
+
+            <div class="col-md-7">
+
+                <!-- Post Create Box
+                ================================================= -->
+                <div class="create-post">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-7">
+                            <div class="form-group">
+                                <img src="images/sarah.jpg" alt="" class="profile-photo-md"/>
+                                <textarea name="texts" id="exampleTextarea" cols="30" rows="1" class="form-control"
+                                          placeholder="Pandonate"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5">
+                            <div class="tools">
+                                <ul class="publishing-tools list-inline">
+                                    <li><a href="#"><i class="ion-compose"></i></a></li>
+                                    <li><a href="#"><i class="ion-images"></i></a></li>
+                                    <li><a href="#"><i class="ion-ios-videocam"></i></a></li>
+                                    <li><a href="#"><i class="ion-map"></i></a></li>
+                                </ul>
+                                <button class="btn btn-primary pull-right">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Post Create Box End-->
+
+                <!-- Post Content
+                ================================================= -->
+                <div class="post-content">
+                    <img src="images/refugees.jpg" alt="post-image" class="img-responsive post-image"/>
+                    <div class="post-container">
+                        <img src="images/hela.jpg" alt="user" class="profile-photo-md pull-left"/>
+                        <div class="post-detail">
+                            <div class="user-info">
+                                <h5><a href="timeline.html" class="profile-link">Alexis Clark</a></h5>
+                                <h5><a href="timeline.html" class="profile-link" style="color: red">Help Refugees</a>
+                                </h5>
+                                <p style="color:  green ">Donations or Loan of Objects </p>
+                                <p style="color: #8dc63f">La vallée de la Bekaa, Liban </p>
+                                <p class="text-muted">Published a photo about 3 mins ago</p>
+                            </div>
+                            <div class="reaction">
+                                <a class="btn text-green"><i class="icon ion-thumbsup"></i> 13</a>
+                                <a class="btn text-red"><i class="fa fa-thumbs-down"></i> 0</a>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="post-text">
+                                <p>Le seuil des 5 millions de réfugiés ayant fui la Syrie vient d'être franchi. Ils ont
+                                    quitté leur pays, leurs foyers, leurs travails mais surtout leurs souvenirs en
+                                    essayant seulement de survivre. Ces gens sont dans le besoin. Ils ont besoin d'une
+                                    aide matérielle mais notamment d'un encadrement moral. Aujourd'hui, j'appelle votre
+                                    générosité et votre humanité pour aider ces gens à revoir le jour.<br>
+                                    N'hésitez pas à me contacter sur mon adresse email alexis.clark@gmail.com <br>
+                                    par téléphone +3356985821 <br>
+                                    messagerie privée.<br>
+                                    Réagissez s'il vous plait !
+                                    <i class="em em-anguished"></i> <i class="em em-anguished"></i> <i
+                                            class="em em-anguished"></i></p>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="post-comment">
+                                <img src="images/fille.jpg" alt="" class="profile-photo-sm"/>
+                                <p><a href="timeline.html" class="profile-link">Diana Daus </a><i
+                                        class="em em-anguished"></i> C'est vraiment trise ! #IHelp #Pandon </p>
+                            </div>
+                            <div class="post-comment">
+                                <img src="images/homme.jpg" alt="" class="profile-photo-sm"/>
+                                <p><a href="timeline.html" class="profile-link">John Thomas</a> Les pauvres ! Quel
+                                    destin... </p>
+                            </div>
+                            <div class="post-comment">
+                                <img src="images/sarah.jpg"" alt="" class="profile-photo-sm" />
+                                <input type="text" class="form-control" placeholder="Post a comment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post Content
+                ================================================= -->
+                <div class="post-content">
+                    <video class="post-video" controls>
+                        <source src="videos/tunisie.mp4" type="video/mp4">
+                    </video>
+                    <div class="post-container">
+                        <img src="images/sophia.jpg" alt="user" class="profile-photo-md pull-left"/>
+                        <div class="post-detail">
+                            <div class="user-info">
+                                <h5><a href="timeline.html" class="profile-link">Sophia Tunisie</a></h5>
+                                <h5><a href="timeline.html" class="profile-link" style="color: red">Kill Pauvrety</a>
+                                </h5>
+                                <p style="color:  green ">Donation or Loan of Objects </p>
+                                <p style="color: #8dc63f">Jendouba, Tunisie </p>
+                                <p class="text-muted">Published a video about 33 mins ago</p>
+                            </div>
+                            <div class="reaction">
+                                <a class="btn text-green"><i class="icon ion-thumbsup"></i> 75</a>
+                                <a class="btn text-red"><i class="fa fa-thumbs-down"></i> 8</a>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="post-text">
+                                <p>En 2017 et en Tunisie, il existe encore des gens qui vivent dans des conditions
+                                    misérables, dans la pauvreté et le besoin.
+                                    Aujourd'hui depuis mon compte Pandon, je lance un appel aux plus genereux des
+                                    pandors pour aider ces gens
+                                    à améliorer leurs conditions de vie.
+                                </p>
+                            </div>
+                            <div class="line-divider"></div>
+
+
+                            <div class="post-comment">
+                                <img src="images/linda.jpg" alt="" class="profile-photo-sm"/>
+                                <p><a href="timeline.html" class="profile-link">Linda Kacem</a> Je suis prete à aider
+                                    ces gens. Check your inbox Sophia
+                                    <i class="em em-blush"></i></p>
+                            </div>
+                            <div class="post-comment">
+                                <img src="images/sarah.jpg" alt="" class="profile-photo-sm"/>
+                                <input type="text" class="form-control" placeholder="Post a comment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post Content
+                ================================================= -->
+                <div class="post-content">
+                    <div class="post-container">
+                        <img src="images/tina.jpg" alt="user" class="profile-photo-md pull-left"/>
+                        <div class="post-detail">
+                            <div class="user-info">
+                                <h5><a href="timeline.html" class="profile-link">Tina Lohan</a></h5>
+                                <h5><a href="timeline.html" class="profile-link" style="color: red">Don du sang</a></h5>
+                                <p style="color:  green ">Blood donations</p>
+                                <p style="color: #8dc63f">Toulouse, France </p>
+                                <p class="text-muted">Published a status about 1 hour ago</p>
+                            </div>
+                            <div class="reaction">
+                                <a class="btn text-green"><i class="icon ion-thumbsup"></i> 23</a>
+                                <a class="btn text-red"><i class="fa fa-thumbs-down"></i> 4</a>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="post-text">
+                                <p>
+                                    Aujourd'hui, Ma famille passe par une période très dure ! Mon mari est tellement
+                                    malade et dans un besoin urgent du sang O Négatif ! Prière de nous aider à surmonter
+                                    cette épreuve <i class="em em-cry"></i></p>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="post-comment">
+                                <img src="images/Chris.jpeg" alt="" class="profile-photo-sm"/>
+                                <p><a href="timeline.html" class="profile-link">Chris Jefferson </a> J'arrive ! je
+                                    t'appelle toute de suite #Pandor #lifeSaver <i class="em em-muscle"></i></p>
+                            </div>
+                            <div class="post-comment">
+                                <img src="images/tina.jpg" alt="" class="profile-photo-sm"/>
+                                <p><a href="timeline.html" class="profile-link">Tina Lohan </a> Merci Chris d'etre
+                                    toujours là pour nous ! Tu es vraiment un life saver, our life saver !
+                                    <i class="em em-thumbsup"></i></i></p>
+                            </div>
+                            <div class="post-comment">
+                                <img src="images/sarah.jpg" alt="" class="profile-photo-sm"/>
+                                <input type="text" class="form-control" placeholder="Post a comment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post Content
+                ================================================= -->
+                <div class="post-content">
+                    <div class="google-maps">
+                        <div id="map" class="map"></div>
+                    </div>
+                    <div class="post-container">
+                        <img src="images/maher.jpg" alt="user" class="profile-photo-md pull-left"/>
+                        <div class="post-detail">
+                            <div class="user-info">
+                                <h5><a href="timeline.html" class="profile-link">Maher Lee</a></h5>
+                                <p class="text-muted"><i class="icon ion-ios-location"></i> Published a map 1 day ago
+                                </p>
+                            </div>
+                            <div class="reaction">
+                                <a class="btn text-green"><i class="icon ion-thumbsup"></i> 17</a>
+                                <a class="btn text-red"><i class="fa fa-thumbs-down"></i> 0</a>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="post-text">
+                                <p>Au Nigérie, il y a une croissance mais les inégalités persistent et les
+                                    infrastructures tombent en ruine. On manque du plus basique, tels que de bonnes
+                                    routes, des hopitaux, des écoles, de l’électricité, de l’eau potable et des
+                                    habitations décentes.
+                                    Appels au dons pour construire une école qui se respecte pour nos pauvres enfants.
+                                    Nos enfants ne revent pas d'aller au Disney Land mais simplement d'etre enseignés et
+                                    illuminés.
+                                    Non Sérieux s'abstenir ! <i class="em em-x"> </i>
+                                </p>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="post-comment">
+                                <img src="images/sarah.jpg" alt="" class="profile-photo-sm"/>
+                                <input type="text" class="form-control" placeholder="Post a comment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Newsfeed Common Side Bar Right
+                ================================================= -->
+                <div class="col-md-2 static">
+                    <div class="suggestions" id="sticky-sidebar">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--preloader-->
+        <div id="spinner-wrapper">
+            <div class="spinner"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts
+================================================= -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTMXfmDn0VlqWIyoOxK8997L-amWbUPiQ&callback=initMap"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky-kit.min.js"></script>
+<script src="js/jquery.scrollbar.min.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>

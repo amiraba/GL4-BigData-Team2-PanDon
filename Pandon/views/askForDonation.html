@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is social network html5 template available in themeforest......" />
+	<meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page" />
+	<meta name="robots" content="index, follow" />
+	<title>Ask for help</title>
+
+	<!-- Stylesheets
+    ================================================= -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/ionicons.min.css" />
+	<link rel="stylesheet" href="/css/font-awesome.min.css" />
+	<link href="/css/emoji.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/map.css" />
+	<link rel="stylesheet" type="text/css" href="/css/formDonation.css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+	<script src="/js/map.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcRpU62qS_bbtTyUZ9jNVhcHzBRkKWTjU&libraries=places&callback=initAutocomplete" async defer></script>
+
+	<!--Favicon-->
+	<link rel="shortcut icon" type="/image/png" href="/images/fav.png" />
+</head>
+
+<body>
+	<!-- Header
+    ================================================= -->
+	<header id="header">
+		<nav class="navbar navbar-default navbar-fixed-top menu">
+			<div class="container">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand" href="/" style="color: white;font-style: italic;"> <!--<img src="images/fav.png" alt="logo" />--> Pandon</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right main-menu">
+						<li class="dropdown"><a href="timeline.html">Sarah</a></li>
+						 <li class="dropdown"><a href="home.html">Home</a></li>
+                         <li class="dropdown"><a href="/donations/add">Ask for help</a></li>
+						 <li class="dropdown"><a href="contact.html">Contact</a></li>
+						 <li class="dropdown"><a href="index-register.html">Sign Out</a></li>
+					</ul>
+					<form class="navbar-form navbar-right hidden-sm" action="/search/run" method="post">
+						<div class="form-group">
+							<i class="icon ion-android-search"></i>
+							<input type="text" name="title" class="form-control" placeholder="Search dons..">
+						</div>
+					</form>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+	</header>
+	<!--Header End-->
+
+	<div id="page-contents" style="height:100%; width:100%">
+		<div class="container" style="height:100%; width:100%">
+			<div class="row" style="height:100%; width:100%">
+
+				<!-- Newsfeed Common Side Bar Left
+          ================================================= -->
+				<div class="col-md-3 static">
+                <div class="profile-card">
+                    <img src="/images/sarah.jpg" alt="user" class="profile-photo" />
+                    <br> </br>
+                    <h5><a href="timeline.html" class="text-white">Sarah Cruiz</a></h5>
+                </div><!--profile card ends-->
+                <ul class="nav-news-feed">
+                    <li><i class="icon ion-ios-paper"></i><div><a href="newsfeed.html">My Feeds</a></div></li>
+                    <li><i class="icon ion-chatboxes"></i><div><a href="newsfeed-messages.html">Messages</a></div></li>
+                    <li><i class="icon ion-images"></i><div><a href="newsfeed-images.html">Images</a></div></li>
+                    <li><i class="icon ion-ios-videocam"></i><div><a href="newsfeed-videos.html">Videos</a></div></li>
+                    <li><i class="icon icon ion-planet"></i><div><a href="newsfeed-maps.html">Maps</a></div></li>
+                </ul><!--news-feed links ends-->
+
+            </div>
+
+				<div class="col-md-7" style="text-align:center;height:100%; width:100%">
+					<h1>Ask for a donation</h1>
+					<form action='/donations' method="POST" style="height:100%; width:100%">
+						<br>
+						<h4 style="text-align:left">Location of the action :</h4>
+						<div id="map"> </div>
+						<br>
+						<div class='field'>
+							<h4 style="text-align:left">Title of the action :</h4>
+							<input placeholder='Title' name="title">
+							<label>Titre</label>
+						</div>
+						<h4 style="text-align:left">Category of the action :</h4>
+
+						<div class="mainselection">
+						<select name="category" id="select_cat">
+							<option></option>
+							<% for(var i=0; i<rows.length; i++) {%>
+							<option value="<%= rows[i].id %>"><%= rows[i].name %></option>
+							<% } %>
+						</select>
+						</div>
+						<button id="add-cat"><i class="fa fa-plus-circle"></i></button>
+						<input id="add-cat-input" placeholder='Category' name="category-name" style="display: none;">
+						<button id="submit-add-cat" style="display: none;"><i class="fa fa-check-circle"></i></button>
+						<button id="cancel-add-cat" style="display: none;"><i class="fa fa-times-circle"></i></button>
+						<div class='field'>
+							<h4 style="text-align:left">Description of the action</h4>
+
+							<textarea placeholder='Description' name="description"></textarea>
+						</div>
+						<br>
+
+						<div class='field'>
+							<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
+						</div>
+
+						<input type="text" id="media" name="media" style="display: none">
+
+						<br>
+						<div class='field form-actions' style="text-align:center; padding-top: 160px;">
+							<button type='submit'>Submit</button>
+						</div>
+
+					</form>
+
+					<div class="col-md-7" style='margin-top: 160px; width: 100%; text-align:left;'>
+						<h4>Upload photos and videos</h4>
+
+						<div>
+
+							<form ref='uploadForm'
+								  action="/upload",
+								  method="POST",
+								  id='uploadForm'
+								  encType="multipart/form-data">
+								<input type="file" name="myimage" />
+								<input type='submit' id='submit-upload' name='submit' value='Upload!' />
+							</form>
+						</div>
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+			<!-- Footer
+    ================================================= -->
+
+			<!--preloader-->
+			<div id="spinner-wrapper">
+				<div class="spinner"></div>
+			</div>
+
+			<!-- Scripts
+    ================================================= -->
+			<script src="/js/jquery-3.1.1.min.js"></script>
+			<script src="/js/bootstrap.min.js"></script>
+			<script src="/js/masonry.pkgd.min.js"></script>
+			<script src="/js/jquery.sticky-kit.min.js"></script>
+			<script src="/js/jquery.scrollbar.min.js"></script>
+			<script src="/js/script.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+			<script type="text/javascript">
+                $('select').select2();
+                document.getElementById('pac-input').name = "adress";
+			</script>
+			<script type="text/javascript">
+                $('#add-cat').on('click', function (e) {
+					e.preventDefault();
+                    document.getElementById("add-cat").style.display = 'none';
+                    document.getElementsByClassName("mainselection")[0].style.display = 'none';
+                    document.getElementById("add-cat-input").style.display = 'block';
+                    document.getElementById("submit-add-cat").style.display = 'block';
+                    document.getElementById("cancel-add-cat").style.display = 'block';
+                });
+                $('#cancel-add-cat').on('click', function (e) {
+                    e.preventDefault();
+                    document.getElementById("add-cat").style.display = 'block';
+                    document.getElementById("add-cat").style.left = '0px';
+                    document.getElementsByClassName("mainselection")[0].style.display = 'block';
+                    document.getElementById("add-cat-input").style.display = 'none';
+                    document.getElementById("submit-add-cat").style.display = 'none';
+                    document.getElementById("cancel-add-cat").style.display = 'none';
+                });
+
+                var testForm = document.getElementById('uploadForm');
+                testForm.onsubmit = function(event) {
+                    event.preventDefault();
+
+                    var request = new XMLHttpRequest();
+// POST to any url
+                    request.open('POST', "/upload", false);
+
+                    var formData = new FormData(document.getElementById('uploadForm'));
+                    request.onreadystatechange = function() {//Call a function when the state changes.
+                        if(request.readyState == 4 && request.status == 200) {
+                            $('#media').val(request.responseText);
+                        }
+                    }
+                    request.send(formData);
+                };
+
+                $('#submit-add-cat').on('click', function (e) {
+                    e.preventDefault();
+                    var category = document.getElementsByName("category-name")[0].value;
+                    var name = {"name": category};
+                    $.ajax({
+                        type: "POST",
+                        url: "/categories",
+                        data: JSON.stringify(name),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function(data) {
+                            var selectBox = document.getElementById('select_cat');
+                            for(var i = selectBox.options.length - 1 ; i >= 0 ; i--)
+                            {
+                                selectBox.remove(i);
+                            }
+                            selectBox.options.add( new Option("", ""));
+                            for(var i = 0, l = data.rows.length; i < l; i++){
+                                if(data.rows[i].name == category){
+                                    var option = new Option(data.rows[i].name, data.rows[i].id);
+                                    option.selected = true;
+                                    selectBox.options.add(option);
+                                }
+                                else
+                                    selectBox.options.add( new Option(data.rows[i].name, data.rows[i].id));
+                            }
+                        },
+                    });
+                    document.getElementById("add-cat").style.display = 'block';
+                    document.getElementById("add-cat").style.left = '0px';
+                    document.getElementsByClassName("mainselection")[0].style.display = 'block';
+                    document.getElementById("add-cat-input").style.display = 'none';
+                    document.getElementById("submit-add-cat").style.display = 'none';
+                    document.getElementById("cancel-add-cat").style.display = 'none';
+                });
+
+
+
+			</script>
+</body>
+
+</html>

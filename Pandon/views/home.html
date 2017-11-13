@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is social network html5 template available in themeforest......"/>
+    <meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page"/>
+    <meta name="robots" content="index, follow"/>
+    <title>Pandon | Home </title>
+
+    <!-- Stylesheets
+    ================================================= -->
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../public/css/style.css"/>
+    <link rel="stylesheet" href="../public/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../public/css/font-awesome.min.css"/>
+    <link href="../public/css/emoji.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="../public/images/fav.png"/>
+
+</head>
+<body>
+
+<!-- Header
+================================================= -->
+<header id="header">
+    <nav class="navbar navbar-default navbar-fixed-top menu">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right main-menu">
+                    <li class="dropdown"><a href="timeline.html">Sarah</a></li>
+                    <li class="dropdown"><a href="home.html">Home</a></li>
+                    <li class="dropdown"><a href="askForDonation.html">Get donations</a></li>
+                    <li class="dropdown"><a href="contact.html">Contact</a></li>
+                    <li class="dropdown"><a href="index-register.html">Sign Out</a></li>
+                </ul>
+                <form class="navbar-form navbar-right hidden-sm">
+                    <div class="form-group">
+                        <i class="icon ion-android-search"></i>
+                        <input type="text" class="form-control" placeholder="Search dons, photos, videos">
+                    </div>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</header>
+<!--Header End-->
+<div id="contents">
+    <div class="container">
+        <div class="row">
+
+            <!-- Newsfeed Common Side Bar Left
+            ================================================= -->
+            <div class="col-md-3 static">
+                <div class="profile-card">
+                    <img src="../public/images/sarah.jpg" alt="user" class="profile-photo"/>
+                    <br> </br>
+                    <h5><a href="timeline.html" class="text-white">Sarah Cruiz</a></h5>
+                </div><!--profile card ends-->
+                <ul class="nav-news-feed">
+                    <li><i class="icon ion-ios-paper"></i>
+                        <div><a href="newsfeed.html">My Feeds</a></div>
+                    </li>
+                    <li><i class="icon ion-chatboxes"></i>
+                        <div><a href="newsfeed-messages.html">Messages</a></div>
+                    </li>
+                    <li><i class="icon ion-images"></i>
+                        <div><a href="newsfeed-images.html">Images</a></div>
+                    </li>
+                    <li><i class="icon ion-ios-videocam"></i>
+                        <div><a href="newsfeed-videos.html">Videos</a></div>
+                    </li>
+                    <li><i class="icon icon ion-planet"></i>
+                        <div><a href="newsfeed-maps.html">Maps</a></div>
+                    </li>
+                </ul><!--news-feed links ends-->
+
+            </div>
+
+            <div class="col-md-7">
+
+                <!-- Post Create Box
+                ================================================= -->
+                <div class="create-post">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-7">
+                            <div class="form-group">
+                                <img src="../public/images/sarah.jpg" alt="" class="profile-photo-md"/>
+                                <textarea name="texts" id="exampleTextarea" cols="30" rows="1" class="form-control"
+                                          placeholder="Pandonate"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5">
+                            <div class="tools">
+                                <ul class="publishing-tools list-inline">
+                                    <li><a href="#"><i class="ion-compose"></i></a></li>
+                                    <li><a href="#"><i class="ion-images"></i></a></li>
+                                    <li><a href="#"><i class="ion-ios-videocam"></i></a></li>
+                                    <li><a href="#"><i class="ion-map"></i></a></li>
+                                </ul>
+                                <button class="btn btn-primary pull-right">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Post Create Box End-->
+    <div id="page-contents">
+              <!-- Newsfeed Common Side Bar Right
+                ================================================= -->
+                <div class="col-md-2 static">
+                    <div class="suggestions" id="sticky-sidebar">
+                            <button type="button" onclick="JSONTest(json.id)" class="btn btn-primary pull-right">Jaide</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--preloader-->
+        <div id="spinner-wrapper">
+            <div class="spinner"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts
+================================================= -->
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTMXfmDn0VlqWIyoOxK8997L-amWbUPiQ&callback=initMap"></script>
+<script src="../public/js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/jquery.sticky-kit.min.js"></script>
+<script src="../public/js/jquery.scrollbar.min.js"></script>
+<script src="../public/js/script.js"></script>
+<script>
+
+
+$.ajax({
+            url: "http://localhost:3000/donations",
+            type: "GET",
+            async    : true,
+
+            success: function(resultData) {
+                var htmlElements = "";
+                for (var i = 0; i < resultData.length; i++) {
+                  var userName;
+                  var userNamejson;
+                  var categoryName;
+                  var catNamejson;
+                  $.ajax({
+                              url: "http://localhost:3000/donations/user",
+                              type: "GET",
+                              async    : false,
+                              'data' : {
+                                  'user_id' : resultData[i].user_id
+                                },
+
+                              success: function(resultName) {
+                                  userName = JSON.stringify(resultName);
+                                  userNamejson = JSON.parse(userName);
+
+
+                              }
+                            });
+
+                            $.ajax({
+                                        url: "http://localhost:3000/categories/category",
+                                        type: "GET",
+                                        async    : false,
+                                        'data' : {
+                                            'category_id' : resultData[i].category_id
+                                          },
+
+                                        success: function(catName) {
+                                            categoryName = JSON.stringify(catName[0]);
+                                            catNamejson = JSON.parse(categoryName);
+                                            alert(JSON.stringidy(catNamejson));
+
+
+                                        }
+                                      });
+
+                              result = JSON.stringify(resultData[i]);
+                              var json = JSON.parse(result);
+                              var img = "../public/uploads/"+json.media_path;
+                              htmlElements += '<div class="post-content"><div class="post-container"> \
+                                <img src='+img+' alt="post-image" class="img-responsive post-image"/> \
+                                           <img src="../public/images/tina.jpg" alt="user" class="profile-photo-md pull-left"/> \
+                                           <div class="post-detail"> \
+                                               <div class="user-info"> \
+                                                   <h5><a href="timeline.html" class="profile-link">'+userNamejson.firstName+' '+userNamejson.lastName+'</a></h5> \
+                                                   <h5><a href="timeline.html" class="profile-link" style="color: red">'+catNamejson.name+'</a></h5> \
+                                                   <p style="color:  green ">'+json.title+'</p> \
+                                                   <p style="color: #8dc63f">'+json.adress+' </p> \
+                                                   <p class="text-muted">Published on '+json.time+'</p>\
+                                                   <button type="button" onclick="JSONTest(json.id)" class="btn btn-primary pull-right">Jaide</button>\
+                                               </div> \
+                                               <div class="line-divider"></div> \
+                                               <div class="post-text"> \
+                                                   <p>'+json.description+' \
+                                               </div> \
+                                               <div class="line-divider"></div> \
+                                           </div> \
+                                       </div> \
+                                   </div>';
+                }
+
+                var container = document.getElementById("page-contents");
+                container.innerHTML = htmlElements;
+
+
+            },
+            error : function(jqXHR, textStatus, errorThrown) {
+            },
+
+            timeout: 120000,
+        });
+
+
+</script>
+
+<script type="text/javascript">
+
+JSONTest = function(theIdPost) {
+
+    var resultDiv = $("#resultDivContainer");
+
+    $.ajax({
+        url: "http://localhost:3000/jaide/add",
+        type: "POST",
+        crossDomain:true,
+        //login: JSON.parse(localStorage.getItem("user"))._id
+        //data: { idUser:"3" , idPost: "1" },
+        data: { idUser: JSON.parse(localStorage.getItem("user"))._id , idPost: theIdPost },
+        dataType: "json",
+        success: function (result) {
+            switch (result) {
+                case true:
+                    processResponse(result);
+                    break;
+                default:
+                    resultDiv.html(result);
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            //alert(xhr.status);
+            //alert(thrownError);
+        }
+    });
+};
+
+</script>
+
+</body>
+</html>

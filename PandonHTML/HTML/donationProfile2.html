@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is social network html5 template available in themeforest......" />
+	<meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page" />
+	<meta name="robots" content="index, follow" />
+	<title>Donation profile</title>
+
+	<!-- Stylesheets
+    ================================================= -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/ionicons.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link href="css/emoji.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/map.css" />
+	<link rel="stylesheet" type="text/css" href="css/formDonation.css" />
+
+	<script src="js/map.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcRpU62qS_bbtTyUZ9jNVhcHzBRkKWTjU&libraries=places&callback=initAutocomplete" async defer></script>
+
+	<!--Favicon-->
+	<link rel="shortcut icon" type="image/png" href="images/fav.png" />
+	<style>
+		p, .profile-link, h5 {
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body>
+
+<!-- Header
+================================================= -->
+<header id="header">
+	<nav class="navbar navbar-default navbar-fixed-top menu">
+		<div class="container">
+
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index-register.html"><img src="images/logo.png" alt="logo" /></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-menu">
+					<li class="dropdown"><a href="contact.html">Sarah</a></li>
+					<li class="dropdown"><a href="contact.html">Home</a></li>
+					<li class="dropdown"><a href="contact.html">Messages</a></li>
+					<li class="dropdown"><a href="contact.html">Sign Out</a></li>
+				</ul>
+				<form class="navbar-form navbar-right hidden-sm">
+					<div class="form-group">
+						<i class="icon ion-android-search"></i>
+						<input type="text" class="form-control" placeholder="Search dons, photos, videos">
+					</div>
+				</form>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+</header>
+<!--Header End-->
+
+<div id="page-contents" style="height:100%; width:100%">
+	<div class="container" style="height:100%; width:100%">
+		<div class="row" style="height:100%; width:100%">
+			<div class="col-md-7" style="text-align:center;height:100%; width:100%">
+				<br>
+				<div class="post-content">
+					<video class="post-video" controls> <source src="videos/tunisie.mp4" type="video/mp4"> </video>
+					<div class="post-container">
+						<img src="images/sophia.jpg" alt="user" class="profile-photo-md pull-left" />
+						<div class="post-detail">
+							<div class="user-info">
+								<h5><a href="timeline.html" class="profile-link">Sophia Tunisie</a></h5>
+								<h5><a href="timeline.html" class="profile-link" style="color: red">Kill Pauvrety</a></h5>
+								<p style="color:  green ">Donation or Loan of Objects </p>
+								<p style="color: #8dc63f">Jendouba, Tunisie </p>
+								<p class="text-muted">Published a video about 33 mins ago</p>
+							</div>
+							<div class="reaction">
+								<a class="btn text-green"><i class="icon ion-thumbsup"></i> 75</a>
+								<a class="btn text-red"><i class="fa fa-thumbs-down"></i> 8</a>
+							</div>
+							<div class="line-divider"></div>
+							<div class="post-text">
+								<p>En 2017 et en Tunisie, il existe encore des gens qui vivent dans des conditions misérables, dans la pauvreté et le besoin.
+									Aujourd'hui depuis mon compte Pandon, je lance un appel aux plus genereux des pandors pour aider ces gens
+									à améliorer leurs conditions de vie.
+								</p>
+							</div>
+							<div class="line-divider"></div>
+
+
+							<div class="post-comment">
+								<img src="images/linda.jpg" alt="" class="profile-photo-sm" />
+								<p><a href="timeline.html" class="profile-link">Linda Kacem</a> Je suis prete à aider ces gens. Check your inbox Sophia
+									<i class="em em-blush"></i> </p>
+							</div>
+							<div class="post-comment">
+								<img src="images/sarah.jpg" alt="" class="profile-photo-sm" />
+								<input type="text" class="form-control" placeholder="Post a comment">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h4 style="text-align:left">Action location:</h4>
+				<div id="map"> </div>
+				<br>
+
+			</div>
+		</div>
+
+		<!-- Footer
+================================================= -->
+
+		<!--preloader-->
+		<div id="spinner-wrapper">
+			<div class="spinner"></div>
+		</div>
+
+		<!-- Scripts
+================================================= -->
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/jquery.sticky-kit.min.js"></script>
+		<script src="js/jquery.scrollbar.min.js"></script>
+		<script src="js/script.js"></script>
+</body>
+
+</html>

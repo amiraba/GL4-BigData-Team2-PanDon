@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="This is social network html5 template available in themeforest......" />
+		<meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page" />
+		<meta name="robots" content="index, follow" />
+		<title>Pandon | Search</title>
+
+    <!-- Stylesheets
+    ================================================= -->
+		<link rel="stylesheet" href="/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/ionicons.min.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="/image/png" href="/images/fav.png"/>
+	</head>
+  <body>
+
+ 
+    <!-- Header
+    ================================================= -->
+		<header id="header">
+      <nav class="navbar navbar-default navbar-fixed-top menu">
+        <div class="container">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<a class="navbar-brand" href="/" style="color: white;font-style: italic;"> <!--<img src="images/fav.png" alt="logo" />--> Pandon</a>          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right main-menu">
+             <li class="dropdown"><a href="timeline.html">Sarah</a></li>
+              <li class="dropdown"><a href="/">Home</a></li>
+              <li class="dropdown"><a href="/donations/add">Ask for help</a></li>
+              <li class="dropdown"><a href="/contact">Contact</a></li>
+              <li class="dropdown"><a href="index-register.html">Sign Out</a></li>
+
+            </ul>
+           <form class="navbar-form navbar-right hidden-sm" action="/search/run" method="post">
+                    <div class="form-group">
+                        <i class="icon ion-android-search"></i>
+                        <input type="text" name="title" class="form-control" placeholder="Search dons..">
+                    </div>
+                </form>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav>
+    </header>
+    <!--Header End-->
+      <div class="container">
+        <div class="row">
+
+          
+
+          <!-- Newsfeed Common Side Bar Left
+          ================================================= -->
+          <div class="col-md-3 static" style="padding-top: 5px">
+           <br>
+            <div class="profile-card">
+              <img src="/images/sarah.jpg" alt="user" class="profile-photo" />
+              <br> </br>
+              <h5><a href="timeline.html" class="text-white">Sarah Cruiz</a></h5>
+            </div><!--profile card ends-->
+
+           
+            <form action="/search/run" method="post">
+            <ul>
+              <div style=" margin-left: -15px">
+                <input type="text" class="form-control" name="title" placeholder="Post Title"></a></div>
+              <br>
+              <div style=" margin-left: -15px"><SELECT class="form-control" size="1" name="category">
+                <option value="" disabled selected hidden>Please Choose a category...</option>
+
+                <% for(var i=0; i<categories.length; i++) {%>
+              <OPTION value="<%= categories[i].name %>"><%= categories[i].name %> </OPTION>
+                <%  } %>
+
+
+              </SELECT></div>
+              <br>
+              <div style=" margin-left: -15px"><input type="text" class="form-control" placeholder="Adresse" name="adresse"></a></div>
+              <br>
+              <div style=" margin-left: -15px"><input type="submit" value="Submit"  class="form-control" /></a></div>
+
+            </ul><!--news-feed links ends-->
+
+            </form>
+          </div>
+
+    <div class="container">
+
+      <!-- Timeline
+      ================================================= -->
+      <div class="timeline">
+        <div id="page-contents">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-7">
+              <!-- Friend List
+              ================================================= -->
+              <div class="friend-list">
+                <div class="row">
+                  <!-- Friend item -->
+
+
+
+
+                    <% for(var i=0; i<posts.length; i++) {%>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="friend-card">
+                      <img src="/images/refugees.jpg" alt="profile-cover" class="img-responsive cover" />
+                      <div class="card-info">
+                        <img src="/images/hela.jpg" alt="user" class="profile-photo-lg" />
+                        <div class="friend-info">
+                        <a class="pull-right text-green" class="btn text-green"><i class="icon ion-thumbsup"></i> 13</a>
+                          <h5><a href="timeline.html" class="profile-link">Alexis Clark</a></h5>
+                          <h5><a href="timeline.html" class="profile-link" style="color: red"> <%= posts[i].title %></a></h5>
+                          <p style= "color:  green " > <%= posts[i].category.name%></p>
+                          <p> <%= posts[i].description %></p>
+                          <p>Published about 3 mins ago</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% } %>
+
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 static">
+            <div class="suggestions" id="sticky-sidebar">
+              <h4 class="grey">Who to Follow</h4>
+              <div class="follow-user">
+                <img src="http://placehold.it/300x300" alt="" class="profile-photo-sm pull-left" />
+                <div>
+                  <h5><a href="#">Diana Amber</a></h5>
+                  <a href="/followers/follow" class="text-green">Follow</a>
+                </div>
+              </div>
+              <div class="follow-user">
+                    <img src="http://placehold.it/300x300" alt="" class="profile-photo-sm pull-left" />
+                    <div>
+                        <h5><a href="#">Lilia Sfaxi</a></h5>
+                        <a href="/followers/unfollow" class="text-red">Unfollow</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer
+    ================================================= -->
+
+    <!-- Scripts
+    ================================================= -->
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.sticky-kit.min.js"></script>
+    <script src="/js/jquery.scrollbar.min.js"></script>
+    <script src="/js/script.js"></script>
+        </div>
+      </div>
+  </body>
+</html>
